@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Bootstrap work</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div class="acc-summary">
+                <p class="heading">YOUR ACCOUNT SUMMARY</p>
+                <div class="acc-summary-section">
+                    <ul>
+                        <li>
+                            <span class="terms">INVESTMENT VALUE</span><br/>
+                            <span class="terms-value">SGD 7,924</span>
+                        </li>
+                        <li>
+                            <span class="terms">INVESTMENT VALUE</span><br/>
+                            <span class="terms-value">SGD 7,924</span>
+                        </li>
+                        <li>
+                            <span class="terms">INVESTMENT VALUE</span><br/>
+                            <span class="terms-value">SGD 7,924</span>
+                        </li>
+                        <li>
+                            <span class="terms">INVESTMENT VALUE</span><br/>
+                            <span class="terms-value">SGD 7,924</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="chartContainer" style="max-width: 600px; height: 300px; margin: 0 auto"></div>
+                <div id="acc-footer">You have excess cash availble for investing
+                    <button>Allocate Funds</button>
+                </div>
+            </div>            
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script>
+            $(function () {
+                    chart = new Highcharts.Chart({
+                        chart: {
+                            renderTo: 'chartContainer',
+                            type: 'pie',
+                            backgroundColor: 'rgb(30, 50, 78)'
+                        },
+                         credits: {
+                            enabled: false
+                        },
+                        title: {
+                            text: ''
+                        },    
+                        legend: {
+                            itemStyle: {
+                                color: '#fff'
+                            }
+                        },                   
+                        plotOptions: {
+                            pie: {
+                                shadow: false
+                            }
+                        },
+                        tooltip: {
+                            formatter: function () {
+                                return '<b>' + this.point.name + '</b>: ' + this.y + ' %';
+                            }
+                        },
+                        series: [{
+                            name: 'Browsers',
+                            data: [["Firefox", 6], ["MSIE", 4], ["Chrome", 7]],
+                            size: '60%',
+                            innerSize: '20%',
+                            showInLegend: true,
+                            dataLabels: {
+                                enabled: false
+                            }
+                        }]
+                    });
+                });
+        </script>
+        
+    </body>
+</HTML>

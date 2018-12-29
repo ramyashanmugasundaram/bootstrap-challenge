@@ -1,0 +1,52 @@
+#container{
+    margin: 5% auto;
+    width: 85%;
+}
+
+.acc-summary{
+    background: rgb(30, 50, 78);
+    padding: 10px 25px;
+    float: left;
+}
+
+.heading{
+    color: #fff;
+}
+
+.acc-summary-section{
+    background: rgb(18,44,81);
+    width: 60%;
+    padding: 10px;
+    float: left;
+}
+
+.acc-summary-section ul li{
+   list-style: none;
+   display: inline-block;
+   color: #fff;
+   margin-right: 40px;
+}
+
+.terms{
+    color: rgb(97, 121, 152);
+}
+
+#chartContainer{
+    width: 30%;
+    float: right;
+}
+
+#acc-footer{
+    color: #fff;
+    clear: both;
+    text-align: center;
+}
+ button{
+    background: red;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 8px;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 10px;
+ }
